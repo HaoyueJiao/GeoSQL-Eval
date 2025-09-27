@@ -1,0 +1,16 @@
+all_models:
+  - provider: "ollama"
+    model_name: ["qwen2.5-coder:32b", "codellama:7b", "codellama:13b","geocode-gpt:latest", "deepseek-coder-v2:16b", "qwen3:32b", "qwq:32b","CodeS:3b","CodeS:7b","CodeS:15b"]
+    api_key: "none"
+    base_url: "http://localhost:11434"
+
+  - provider: "JHY"
+    model_name: [ "gemini-2.5-flash","Qwen/QwQ-32B","claude-3-7-sonnet-20250219","o4-mini","gpt-4.1-2025-04-14", "gpt-4.1-mini-2025-04-14","gpt-4o","gpt-4","gpt-4o-mini" ]
+    api_key: "****"
+    base_url: "****"
+
+  - provider: "JHY"
+    model_name: [ "deepseek-ai/DeepSeek-R1-0528", "deepseek-ai/DeepSeek-V3-0324","deepseek-v3-250324" ]
+    api_key: "****"
+    base_url: "****"
+
