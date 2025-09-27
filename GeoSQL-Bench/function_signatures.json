@@ -1,0 +1,3666 @@
+[
+  {
+    "function_name": "box2d",
+    "signature": "",
+    "input_types": [],
+    "output_type": ""
+  },
+  {
+    "function_name": "box3d",
+    "signature": "",
+    "input_types": [],
+    "output_type": ""
+  },
+  {
+    "function_name": "geometry",
+    "signature": "",
+    "input_types": [],
+    "output_type": ""
+  },
+  {
+    "function_name": "geometry_dump",
+    "signature": "",
+    "input_types": [],
+    "output_type": ""
+  },
+  {
+    "function_name": "geography",
+    "signature": "",
+    "input_types": [],
+    "output_type": ""
+  },
+  {
+    "function_name": "AddGeometryColumn",
+    "signature": "text AddGeometryColumn(varchar  table_name, varchar  column_name, integer  srid, varchar  type, integer  dimension, boolean  use_typmod=true);",
+    "input_types": [
+      "varchar",
+      "varchar",
+      "integer",
+      "varchar",
+      "integer",
+      "boolean"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "AddGeometryColumn",
+    "signature": "text AddGeometryColumn(varchar  schema_name, varchar  table_name, varchar  column_name, integer  srid, varchar  type, integer  dimension, boolean  use_typmod=true);",
+    "input_types": [
+      "varchar",
+      "varchar",
+      "varchar",
+      "integer",
+      "varchar",
+      "integer",
+      "boolean"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "AddGeometryColumn",
+    "signature": "text AddGeometryColumn(varchar  catalog_name, varchar  schema_name, varchar  table_name, varchar  column_name, integer  srid, varchar  type, integer  dimension, boolean  use_typmod=true);",
+    "input_types": [
+      "varchar",
+      "varchar",
+      "varchar",
+      "varchar",
+      "integer",
+      "varchar",
+      "integer",
+      "boolean"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "DropGeometryColumn",
+    "signature": "text DropGeometryColumn(varchar  table_name, varchar  column_name);",
+    "input_types": [
+      "varchar",
+      "varchar"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "DropGeometryColumn",
+    "signature": "text DropGeometryColumn(varchar  schema_name, varchar  table_name, varchar  column_name);",
+    "input_types": [
+      "varchar",
+      "varchar",
+      "varchar"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "DropGeometryColumn",
+    "signature": "text DropGeometryColumn(varchar  catalog_name, varchar  schema_name, varchar  table_name, varchar  column_name);",
+    "input_types": [
+      "varchar",
+      "varchar",
+      "varchar",
+      "varchar"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "DropGeometryTable",
+    "signature": "boolean DropGeometryTable(varchar  table_name);",
+    "input_types": [
+      "varchar"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "DropGeometryTable",
+    "signature": "boolean DropGeometryTable(varchar  schema_name, varchar  table_name);",
+    "input_types": [
+      "varchar",
+      "varchar"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "DropGeometryTable",
+    "signature": "boolean DropGeometryTable(varchar  catalog_name, varchar  schema_name, varchar  table_name);",
+    "input_types": [
+      "varchar",
+      "varchar",
+      "varchar"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "Find_SRID",
+    "signature": "integer Find_SRID(varchar  a_schema_name, varchar  a_table_name, varchar  a_geomfield_name);",
+    "input_types": [
+      "varchar",
+      "varchar",
+      "varchar"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "Populate_Geometry_Columns",
+    "signature": "text Populate_Geometry_Columns(boolean  use_typmod=true);",
+    "input_types": [
+      "boolean"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "Populate_Geometry_Columns",
+    "signature": "int Populate_Geometry_Columns(oid relation_oid, boolean  use_typmod=true);",
+    "input_types": [
+      "oid",
+      "boolean"
+    ],
+    "output_type": "int"
+  },
+  {
+    "function_name": "UpdateGeometrySRID",
+    "signature": "text UpdateGeometrySRID(varchar  table_name, varchar  column_name, integer  srid);",
+    "input_types": [
+      "varchar",
+      "varchar",
+      "integer"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "UpdateGeometrySRID",
+    "signature": "text UpdateGeometrySRID(varchar  schema_name, varchar  table_name, varchar  column_name, integer  srid);",
+    "input_types": [
+      "varchar",
+      "varchar",
+      "varchar",
+      "integer"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "UpdateGeometrySRID",
+    "signature": "text UpdateGeometrySRID(varchar  catalog_name, varchar  schema_name, varchar  table_name, varchar  column_name, integer  srid);",
+    "input_types": [
+      "varchar",
+      "varchar",
+      "varchar",
+      "varchar",
+      "integer"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_Collect",
+    "signature": "geometry ST_Collect(geometry g1, geometry g2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "geometry",
+    "variadic": "True"
+  },
+  {
+    "function_name": "ST_Collect",
+    "signature": "geometry ST_Collect(geometry[] g1_array);",
+    "input_types": [
+      "geometry[]"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Collect",
+    "signature": "geometry ST_Collect(geometry set g1field);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_LineFromMultiPoint",
+    "signature": "geometry ST_LineFromMultiPoint(geometry  aMultiPoint);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_MakeEnvelope",
+    "signature": "geometry ST_MakeEnvelope(float xmin, float ymin, float xmax, float ymax, integer srid=unknown);",
+    "input_types": [
+      "float",
+      "float",
+      "float",
+      "float",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_MakeLine",
+    "signature": "geometry ST_MakeLine(geometry geom1, geometry geom2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_MakeLine",
+    "signature": "geometry ST_MakeLine(geometry[] geoms_array);",
+    "input_types": [
+      "geometry[]"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_MakeLine",
+    "signature": "geometry ST_MakeLine(geometry set geoms);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_MakePoint",
+    "signature": "geometry ST_MakePoint(float x, float y);",
+    "input_types": [
+      "float",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_MakePointM",
+    "signature": "geometry ST_MakePointM(float x, float y, float m);",
+    "input_types": [
+      "float",
+      "float",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_MakePolygon",
+    "signature": "geometry ST_MakePolygon(geometry linestring);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Point",
+    "signature": "geometry ST_Point(float x, float y);",
+    "input_types": [
+      "float",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_PointZ",
+    "signature": "geometry ST_PointZ(float x, float y, float z, integer srid=unknown);",
+    "input_types": [
+      "float",
+      "float",
+      "float",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_PointM",
+    "signature": "geometry ST_PointM(float x, float y, float m, integer srid=unknown);",
+    "input_types": [
+      "float",
+      "float",
+      "float",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_PointZM",
+    "signature": "geometry ST_PointZM(float x, float y, float z, float m, integer srid=unknown);",
+    "input_types": [
+      "float",
+      "float",
+      "float",
+      "float",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Polygon",
+    "signature": "geometry ST_Polygon(geometry  lineString, integer  srid);",
+    "input_types": [
+      "geometry",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_TileEnvelope",
+    "signature": "geometry ST_TileEnvelope(integer tileZoom, integer tileX, integer tileY, geometry bounds=SRID=3857;LINESTRING(-20037508.342789 -20037508.342789,20037508.342789 20037508.342789), float margin=0.0);",
+    "input_types": [
+      "integer",
+      "integer",
+      "integer",
+      "geometry",
+      "20037508.342789",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Hexagon",
+    "signature": "geometry ST_Hexagon(float8 size, integer cell_i, integer cell_j, geometry origin);",
+    "input_types": [
+      "float8",
+      "integer",
+      "integer",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Square",
+    "signature": "geometry ST_Square(float8 size, integer cell_i, integer cell_j, geometry origin);",
+    "input_types": [
+      "float8",
+      "integer",
+      "integer",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Letters",
+    "signature": "geometry ST_Letters(text  letters, json  font);",
+    "input_types": [
+      "text",
+      "json"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "GeometryType",
+    "signature": "text GeometryType(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_Boundary",
+    "signature": "geometry ST_Boundary(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_BoundingDiagonal",
+    "signature": "geometry ST_BoundingDiagonal(geometry  geom, boolean  fits=false);",
+    "input_types": [
+      "geometry",
+      "boolean"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_CoordDim",
+    "signature": "integer ST_CoordDim(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "ST_Dimension",
+    "signature": "integer ST_Dimension(geometry  g);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "ST_EndPoint",
+    "signature": "geometry ST_EndPoint(geometry  g);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Envelope",
+    "signature": "geometry ST_Envelope(geometry  g1);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_ExteriorRing",
+    "signature": "geometry ST_ExteriorRing(geometry  a_polygon);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeometryN",
+    "signature": "geometry ST_GeometryN(geometry  geomA, integer  n);",
+    "input_types": [
+      "geometry",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeometryType",
+    "signature": "text ST_GeometryType(geometry  g1);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_HasArc",
+    "signature": "boolean ST_HasArc(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_InteriorRingN",
+    "signature": "geometry ST_InteriorRingN(geometry  a_polygon, integer  n);",
+    "input_types": [
+      "geometry",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_NumCurves",
+    "signature": "integer ST_NumCurves(geometry  a_compoundcurve);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "ST_CurveN",
+    "signature": "geometry ST_CurveN(geometry  a_compoundcurve, integer  index);",
+    "input_types": [
+      "geometry",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_IsClosed",
+    "signature": "boolean ST_IsClosed(geometry  g);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_IsCollection",
+    "signature": "boolean ST_IsCollection(geometry  g);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_IsEmpty",
+    "signature": "boolean ST_IsEmpty(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_IsRing",
+    "signature": "boolean ST_IsRing(geometry  g);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_IsSimple",
+    "signature": "boolean ST_IsSimple(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_M",
+    "signature": "float ST_M(geometry  a_point);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_MemSize",
+    "signature": "integer ST_MemSize(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "ST_NDims",
+    "signature": "integer ST_NDims(geometry  g1);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "ST_NPoints",
+    "signature": "integer ST_NPoints(geometry  g1);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "ST_NRings",
+    "signature": "integer ST_NRings(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "ST_NumGeometries",
+    "signature": "integer ST_NumGeometries(geometry  geom);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "ST_NumInteriorRings",
+    "signature": "integer ST_NumInteriorRings(geometry  a_polygon);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "ST_NumInteriorRing",
+    "signature": "integer ST_NumInteriorRing(geometry  a_polygon);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "ST_NumPatches",
+    "signature": "integer ST_NumPatches(geometry  g1);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "ST_NumPoints",
+    "signature": "integer ST_NumPoints(geometry  g1);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "ST_PatchN",
+    "signature": "geometry ST_PatchN(geometry  geomA, integer  n);",
+    "input_types": [
+      "geometry",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_PointN",
+    "signature": "geometry ST_PointN(geometry  a_linestring, integer  n);",
+    "input_types": [
+      "geometry",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Points",
+    "signature": "geometry ST_Points( geometry geom );",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_StartPoint",
+    "signature": "geometry ST_StartPoint(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Summary",
+    "signature": "text ST_Summary(geometry  g);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_Summary",
+    "signature": "text ST_Summary(geography  g);",
+    "input_types": [
+      "geography"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_X",
+    "signature": "float ST_X(geometry  a_point);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_Y",
+    "signature": "float ST_Y(geometry  a_point);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_Z",
+    "signature": "float ST_Z(geometry  a_point);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_Zmflag",
+    "signature": "smallint ST_Zmflag(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "smallint"
+  },
+  {
+    "function_name": "ST_HasZ",
+    "signature": "boolean ST_HasZ(geometry geom);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_HasM",
+    "signature": "boolean ST_HasM(geometry geom);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_AddPoint",
+    "signature": "geometry ST_AddPoint(geometry linestring, geometry point);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_CollectionExtract",
+    "signature": "geometry ST_CollectionExtract(geometry  collection);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_CollectionHomogenize",
+    "signature": "geometry ST_CollectionHomogenize(geometry  collection);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_CurveToLine",
+    "signature": "geometry ST_CurveToLine(geometry curveGeom, float tolerance, integer tolerance_type, integer flags);",
+    "input_types": [
+      "geometry",
+      "float",
+      "integer",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Scroll",
+    "signature": "geometry ST_Scroll(geometry linestring, geometry point);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_FlipCoordinates",
+    "signature": "geometry ST_FlipCoordinates(geometry geom);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Force2D",
+    "signature": "geometry ST_Force2D(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Force3D",
+    "signature": "geometry ST_Force3D(geometry  geomA, float  Zvalue = 0.0);",
+    "input_types": [
+      "geometry",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Force3DZ",
+    "signature": "geometry ST_Force3DZ(geometry  geomA, float  Zvalue = 0.0);",
+    "input_types": [
+      "geometry",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Force3DM",
+    "signature": "geometry ST_Force3DM(geometry  geomA, float  Mvalue = 0.0);",
+    "input_types": [
+      "geometry",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Force4D",
+    "signature": "geometry ST_Force4D(geometry  geomA, float  Zvalue = 0.0, float  Mvalue = 0.0);",
+    "input_types": [
+      "geometry",
+      "float",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_ForceCollection",
+    "signature": "geometry ST_ForceCollection(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_ForceCurve",
+    "signature": "geometry ST_ForceCurve(geometry g);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_ForceSFS",
+    "signature": "geometry ST_ForceSFS(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_ForceSFS",
+    "signature": "geometry ST_ForceSFS(geometry  geomA, text  version);",
+    "input_types": [
+      "geometry",
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_ForceRHR",
+    "signature": "geometry ST_ForceRHR(geometry g);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_LineExtend",
+    "signature": "geometry ST_LineExtend(geometry  line, float  distance_forward, float distance_backward=0.0);",
+    "input_types": [
+      "geometry",
+      "float",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_LineToCurve",
+    "signature": "geometry ST_LineToCurve(geometry  geomANoncircular);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Multi",
+    "signature": "geometry ST_Multi(geometry  geom);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Normalize",
+    "signature": "geometry ST_Normalize(geometry  geom);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Project",
+    "signature": "geometry ST_Project(geometry  g1, float  distance, float  azimuth);",
+    "input_types": [
+      "geometry",
+      "float",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Project",
+    "signature": "geometry ST_Project(geometry  g1, geometry  g2, float  distance);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Project",
+    "signature": "geography ST_Project(geography  g1, float  distance, float  azimuth);",
+    "input_types": [
+      "geography",
+      "float",
+      "float"
+    ],
+    "output_type": "geography"
+  },
+  {
+    "function_name": "ST_Project",
+    "signature": "geography ST_Project(geography  g1, geography  g2, float  distance);",
+    "input_types": [
+      "geography",
+      "geography",
+      "float"
+    ],
+    "output_type": "geography"
+  },
+  {
+    "function_name": "ST_RemovePoint",
+    "signature": "geometry ST_RemovePoint(geometry linestring, integer offset);",
+    "input_types": [
+      "geometry",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_RemoveRepeatedPoints",
+    "signature": "geometry ST_RemoveRepeatedPoints(geometry geom, float8 tolerance);",
+    "input_types": [
+      "geometry",
+      "float8"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_RemoveIrrelevantPointsForView",
+    "signature": "geometry ST_RemoveIrrelevantPointsForView(geometry  geom, box2d  bounds, boolean cartesian_hint = false);",
+    "input_types": [
+      "geometry",
+      "box2d",
+      "boolean"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_RemoveSmallParts",
+    "signature": "geometry ST_RemoveSmallParts(geometry  geom, double precision  minSizeX, double precision  minSizeY);",
+    "input_types": [
+      "geometry",
+      "double",
+      "double"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Reverse",
+    "signature": "geometry ST_Reverse(geometry  g1);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Segmentize",
+    "signature": "geometry ST_Segmentize(geometry  geom, float  max_segment_length);",
+    "input_types": [
+      "geometry",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Segmentize",
+    "signature": "geography ST_Segmentize(geography  geog, float  max_segment_length);",
+    "input_types": [
+      "geography",
+      "float"
+    ],
+    "output_type": "geography"
+  },
+  {
+    "function_name": "ST_SetPoint",
+    "signature": "geometry ST_SetPoint(geometry linestring, integer zerobasedposition, geometry point);",
+    "input_types": [
+      "geometry",
+      "integer",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_ShiftLongitude",
+    "signature": "geometry ST_ShiftLongitude(geometry  geom);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_WrapX",
+    "signature": "geometry ST_WrapX(geometry  geom, float8  wrap, float8  move);",
+    "input_types": [
+      "geometry",
+      "float8",
+      "float8"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_SnapToGrid",
+    "signature": "geometry ST_SnapToGrid(geometry  geomA, float  originX, float  originY, float  sizeX, float  sizeY);",
+    "input_types": [
+      "geometry",
+      "float",
+      "float",
+      "float",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_SnapToGrid",
+    "signature": "geometry ST_SnapToGrid(geometry  geomA, float  sizeX, float  sizeY);",
+    "input_types": [
+      "geometry",
+      "float",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_SnapToGrid",
+    "signature": "geometry ST_SnapToGrid(geometry  geomA, float  size);",
+    "input_types": [
+      "geometry",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_SnapToGrid",
+    "signature": "geometry ST_SnapToGrid(geometry  geomA, geometry  pointOrigin, float  sizeX, float  sizeY, float  sizeZ, float  sizeM);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "float",
+      "float",
+      "float",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Snap",
+    "signature": "geometry ST_Snap(geometry  input, geometry  reference, float  tolerance);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_SwapOrdinates",
+    "signature": "geometry ST_SwapOrdinates(geometry geom, cstring ords);",
+    "input_types": [
+      "geometry",
+      "cstring"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_IsValid",
+    "signature": "boolean ST_IsValid(geometry  g);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_IsValid",
+    "signature": "boolean ST_IsValid(geometry  g, integer  flags);",
+    "input_types": [
+      "geometry",
+      "integer"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_IsValidDetail",
+    "signature": "valid_detail ST_IsValidDetail(geometry  geom, integer  flags);",
+    "input_types": [
+      "geometry",
+      "integer"
+    ],
+    "output_type": "valid_detail"
+  },
+  {
+    "function_name": "ST_IsValidReason",
+    "signature": "text ST_IsValidReason(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_IsValidReason",
+    "signature": "text ST_IsValidReason(geometry  geomA, integer  flags);",
+    "input_types": [
+      "geometry",
+      "integer"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_MakeValid",
+    "signature": "geometry ST_MakeValid(geometry input);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_MakeValid",
+    "signature": "geometry ST_MakeValid(geometry input, text params);",
+    "input_types": [
+      "geometry",
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_InverseTransformPipeline",
+    "signature": "geometry ST_InverseTransformPipeline(geometry  geom, text  pipeline, integer  to_srid);",
+    "input_types": [
+      "geometry",
+      "text",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_SetSRID",
+    "signature": "geometry ST_SetSRID(geometry  geom, integer  srid);",
+    "input_types": [
+      "geometry",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_SRID",
+    "signature": "integer ST_SRID(geometry  g1);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "ST_Transform",
+    "signature": "geometry ST_Transform(geometry  g1, integer  srid);",
+    "input_types": [
+      "geometry",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Transform",
+    "signature": "geometry ST_Transform(geometry  geom, text  to_proj);",
+    "input_types": [
+      "geometry",
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Transform",
+    "signature": "geometry ST_Transform(geometry  geom, text  from_proj, text  to_proj);",
+    "input_types": [
+      "geometry",
+      "text",
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Transform",
+    "signature": "geometry ST_Transform(geometry  geom, text  from_proj, integer  to_srid);",
+    "input_types": [
+      "geometry",
+      "text",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_TransformPipeline",
+    "signature": "geometry ST_TransformPipeline(geometry  g1, text  pipeline, integer  to_srid);",
+    "input_types": [
+      "geometry",
+      "text",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_BdPolyFromText",
+    "signature": "geometry ST_BdPolyFromText(text  WKT, integer  srid);",
+    "input_types": [
+      "text",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_BdMPolyFromText",
+    "signature": "geometry ST_BdMPolyFromText(text  WKT, integer  srid);",
+    "input_types": [
+      "text",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeogFromText",
+    "signature": "geography ST_GeogFromText(text  EWKT);",
+    "input_types": [
+      "text"
+    ],
+    "output_type": "geography"
+  },
+  {
+    "function_name": "ST_GeographyFromText",
+    "signature": "geography ST_GeographyFromText(text  EWKT);",
+    "input_types": [
+      "text"
+    ],
+    "output_type": "geography"
+  },
+  {
+    "function_name": "ST_GeomCollFromText",
+    "signature": "geometry ST_GeomCollFromText(text  WKT, integer  srid);",
+    "input_types": [
+      "text",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeomCollFromText",
+    "signature": "geometry ST_GeomCollFromText(text  WKT);",
+    "input_types": [
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeomFromEWKT",
+    "signature": "geometry ST_GeomFromEWKT(text  EWKT);",
+    "input_types": [
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeometryFromText",
+    "signature": "geometry ST_GeometryFromText(text  WKT);",
+    "input_types": [
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeometryFromText",
+    "signature": "geometry ST_GeometryFromText(text  WKT, integer  srid);",
+    "input_types": [
+      "text",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeomFromText",
+    "signature": "geometry ST_GeomFromText(text  WKT);",
+    "input_types": [
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeomFromText",
+    "signature": "geometry ST_GeomFromText(text  WKT, integer  srid);",
+    "input_types": [
+      "text",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_LineFromText",
+    "signature": "geometry ST_LineFromText(text  WKT);",
+    "input_types": [
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_LineFromText",
+    "signature": "geometry ST_LineFromText(text  WKT, integer  srid);",
+    "input_types": [
+      "text",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_MLineFromText",
+    "signature": "geometry ST_MLineFromText(text  WKT, integer  srid);",
+    "input_types": [
+      "text",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_MLineFromText",
+    "signature": "geometry ST_MLineFromText(text  WKT);",
+    "input_types": [
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_MPointFromText",
+    "signature": "geometry ST_MPointFromText(text  WKT, integer  srid);",
+    "input_types": [
+      "text",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_MPointFromText",
+    "signature": "geometry ST_MPointFromText(text  WKT);",
+    "input_types": [
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_MPolyFromText",
+    "signature": "geometry ST_MPolyFromText(text  WKT, integer  srid);",
+    "input_types": [
+      "text",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_MPolyFromText",
+    "signature": "geometry ST_MPolyFromText(text  WKT);",
+    "input_types": [
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_PointFromText",
+    "signature": "geometry ST_PointFromText(text  WKT);",
+    "input_types": [
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_PointFromText",
+    "signature": "geometry ST_PointFromText(text  WKT, integer  srid);",
+    "input_types": [
+      "text",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_PolygonFromText",
+    "signature": "geometry ST_PolygonFromText(text  WKT);",
+    "input_types": [
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_PolygonFromText",
+    "signature": "geometry ST_PolygonFromText(text  WKT, integer  srid);",
+    "input_types": [
+      "text",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_WKTToSQL",
+    "signature": "geometry ST_WKTToSQL(text  WKT);",
+    "input_types": [
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeogFromWKB",
+    "signature": "geography ST_GeogFromWKB(bytea  wkb);",
+    "input_types": [
+      "bytea"
+    ],
+    "output_type": "geography"
+  },
+  {
+    "function_name": "ST_GeomFromEWKB",
+    "signature": "geometry ST_GeomFromEWKB(bytea  EWKB);",
+    "input_types": [
+      "bytea"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeomFromWKB",
+    "signature": "geometry ST_GeomFromWKB(bytea  geom);",
+    "input_types": [
+      "bytea"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeomFromWKB",
+    "signature": "geometry ST_GeomFromWKB(bytea  geom, integer  srid);",
+    "input_types": [
+      "bytea",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_LineFromWKB",
+    "signature": "geometry ST_LineFromWKB(bytea  WKB);",
+    "input_types": [
+      "bytea"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_LineFromWKB",
+    "signature": "geometry ST_LineFromWKB(bytea  WKB, integer  srid);",
+    "input_types": [
+      "bytea",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_LinestringFromWKB",
+    "signature": "geometry ST_LinestringFromWKB(bytea  WKB);",
+    "input_types": [
+      "bytea"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_LinestringFromWKB",
+    "signature": "geometry ST_LinestringFromWKB(bytea  WKB, integer  srid);",
+    "input_types": [
+      "bytea",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeomFromWKB",
+    "signature": "geometry ST_GeomFromWKB(bytea  geom);",
+    "input_types": [
+      "bytea"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeomFromWKB",
+    "signature": "geometry ST_GeomFromWKB(bytea  geom, integer  srid);",
+    "input_types": [
+      "bytea",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_WKBToSQL",
+    "signature": "geometry ST_WKBToSQL(bytea  WKB);",
+    "input_types": [
+      "bytea"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Box2dFromGeoHash",
+    "signature": "box2d ST_Box2dFromGeoHash(text  geohash, integer  precision=full_precision_of_geohash);",
+    "input_types": [
+      "text",
+      "integer"
+    ],
+    "output_type": "box2d"
+  },
+  {
+    "function_name": "ST_GeomFromGeoHash",
+    "signature": "geometry ST_GeomFromGeoHash(text  geohash, integer  precision=full_precision_of_geohash);",
+    "input_types": [
+      "text",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeomFromGML",
+    "signature": "geometry ST_GeomFromGML(text  geomgml);",
+    "input_types": [
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeomFromGML",
+    "signature": "geometry ST_GeomFromGML(text  geomgml, integer  srid);",
+    "input_types": [
+      "text",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeomFromGeoJSON",
+    "signature": "geometry ST_GeomFromGeoJSON(text  geomjson);",
+    "input_types": [
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeomFromGeoJSON",
+    "signature": "geometry ST_GeomFromGeoJSON(json  geomjson);",
+    "input_types": [
+      "json"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeomFromGeoJSON",
+    "signature": "geometry ST_GeomFromGeoJSON(jsonb  geomjson);",
+    "input_types": [
+      "jsonb"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeomFromKML",
+    "signature": "geometry ST_GeomFromKML(text  geomkml);",
+    "input_types": [
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeomFromTWKB",
+    "signature": "geometry ST_GeomFromTWKB(bytea  twkb);",
+    "input_types": [
+      "bytea"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GMLToSQL",
+    "signature": "geometry ST_GMLToSQL(text  geomgml);",
+    "input_types": [
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GMLToSQL",
+    "signature": "geometry ST_GMLToSQL(text  geomgml, integer  srid);",
+    "input_types": [
+      "text",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_LineFromEncodedPolyline",
+    "signature": "geometry ST_LineFromEncodedPolyline(text  polyline, integer  precision=5);",
+    "input_types": [
+      "text",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_PointFromGeoHash",
+    "signature": "point ST_PointFromGeoHash(text  geohash, integer  precision=full_precision_of_geohash);",
+    "input_types": [
+      "text",
+      "integer"
+    ],
+    "output_type": "point"
+  },
+  {
+    "function_name": "ST_FromFlatGeobufToTable",
+    "signature": "void ST_FromFlatGeobufToTable(text  schemaname, text  tablename, bytea  FlatGeobuf input data);",
+    "input_types": [
+      "text",
+      "text",
+      "bytea"
+    ],
+    "output_type": "void"
+  },
+  {
+    "function_name": "ST_AsEWKT",
+    "signature": "text ST_AsEWKT(geometry  g1);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsEWKT",
+    "signature": "text ST_AsEWKT(geometry  g1, integer  maxdecimaldigits=15);",
+    "input_types": [
+      "geometry",
+      "integer"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsEWKT",
+    "signature": "text ST_AsEWKT(geography  g1);",
+    "input_types": [
+      "geography"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsEWKT",
+    "signature": "text ST_AsEWKT(geography  g1, integer  maxdecimaldigits=15);",
+    "input_types": [
+      "geography",
+      "integer"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsText",
+    "signature": "text ST_AsText(geometry  g1);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsText",
+    "signature": "text ST_AsText(geometry  g1, integer  maxdecimaldigits = 15);",
+    "input_types": [
+      "geometry",
+      "integer"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsText",
+    "signature": "text ST_AsText(geography  g1);",
+    "input_types": [
+      "geography"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsText",
+    "signature": "text ST_AsText(geography  g1, integer  maxdecimaldigits = 15);",
+    "input_types": [
+      "geography",
+      "integer"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsBinary",
+    "signature": "bytea ST_AsBinary(geometry  g1);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "bytea"
+  },
+  {
+    "function_name": "ST_AsBinary",
+    "signature": "bytea ST_AsBinary(geometry  g1, text NDR_or_XDR);",
+    "input_types": [
+      "geometry",
+      "text"
+    ],
+    "output_type": "bytea"
+  },
+  {
+    "function_name": "ST_AsBinary",
+    "signature": "bytea ST_AsBinary(geography  g1);",
+    "input_types": [
+      "geography"
+    ],
+    "output_type": "bytea"
+  },
+  {
+    "function_name": "ST_AsBinary",
+    "signature": "bytea ST_AsBinary(geography  g1, text NDR_or_XDR);",
+    "input_types": [
+      "geography",
+      "text"
+    ],
+    "output_type": "bytea"
+  },
+  {
+    "function_name": "ST_AsEWKB",
+    "signature": "bytea ST_AsEWKB(geometry  g1);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "bytea"
+  },
+  {
+    "function_name": "ST_AsEWKB",
+    "signature": "bytea ST_AsEWKB(geometry  g1, text NDR_or_XDR);",
+    "input_types": [
+      "geometry",
+      "text"
+    ],
+    "output_type": "bytea"
+  },
+  {
+    "function_name": "ST_AsHEXEWKB",
+    "signature": "text ST_AsHEXEWKB(geometry  g1, text  NDRorXDR);",
+    "input_types": [
+      "geometry",
+      "text"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsHEXEWKB",
+    "signature": "text ST_AsHEXEWKB(geometry  g1);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsEncodedPolyline",
+    "signature": "text ST_AsEncodedPolyline(geometry geom, integer  precision=5);",
+    "input_types": [
+      "geometry",
+      "integer"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsFlatGeobuf",
+    "signature": "bytea ST_AsFlatGeobuf(anyelement set  row);",
+    "input_types": [
+      "anyelement"
+    ],
+    "output_type": "bytea"
+  },
+  {
+    "function_name": "ST_AsFlatGeobuf",
+    "signature": "bytea ST_AsFlatGeobuf(anyelement  row, bool  index);",
+    "input_types": [
+      "anyelement",
+      "bool"
+    ],
+    "output_type": "bytea"
+  },
+  {
+    "function_name": "ST_AsFlatGeobuf",
+    "signature": "bytea ST_AsFlatGeobuf(anyelement  row, bool  index, text  geom_name);",
+    "input_types": [
+      "anyelement",
+      "bool",
+      "text"
+    ],
+    "output_type": "bytea"
+  },
+  {
+    "function_name": "ST_AsGeobuf",
+    "signature": "bytea ST_AsGeobuf(anyelement set  row);",
+    "input_types": [
+      "anyelement"
+    ],
+    "output_type": "bytea"
+  },
+  {
+    "function_name": "ST_AsGeobuf",
+    "signature": "bytea ST_AsGeobuf(anyelement  row, text  geom_name);",
+    "input_types": [
+      "anyelement",
+      "text"
+    ],
+    "output_type": "bytea"
+  },
+  {
+    "function_name": "ST_AsGeoJSON",
+    "signature": "text ST_AsGeoJSON(record  feature, text  geom_column=\"\", integer  maxdecimaldigits=9, boolean  pretty_bool=false, text  id_column='');",
+    "input_types": [
+      "record",
+      "text",
+      "integer",
+      "boolean",
+      "text"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsGeoJSON",
+    "signature": "text ST_AsGeoJSON(geometry  geom, integer  maxdecimaldigits=9, integer  options=8);",
+    "input_types": [
+      "geometry",
+      "integer",
+      "integer"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsGeoJSON",
+    "signature": "text ST_AsGeoJSON(geography  geog, integer  maxdecimaldigits=9, integer  options=0);",
+    "input_types": [
+      "geography",
+      "integer",
+      "integer"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsGML",
+    "signature": "text ST_AsGML(geometry  geom, integer  maxdecimaldigits=15, integer  options=0);",
+    "input_types": [
+      "geometry",
+      "integer",
+      "integer"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsGML",
+    "signature": "text ST_AsGML(geography  geog, integer  maxdecimaldigits=15, integer  options=0, text  nprefix=null, text  id=null);",
+    "input_types": [
+      "geography",
+      "integer",
+      "integer",
+      "text",
+      "text"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsGML",
+    "signature": "text ST_AsGML(integer  version, geometry  geom, integer  maxdecimaldigits=15, integer  options=0, text  nprefix=null, text  id=null);",
+    "input_types": [
+      "integer",
+      "geometry",
+      "integer",
+      "integer",
+      "text",
+      "text"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsGML",
+    "signature": "text ST_AsGML(integer  version, geography  geog, integer  maxdecimaldigits=15, integer  options=0, text  nprefix=null, text  id=null);",
+    "input_types": [
+      "integer",
+      "geography",
+      "integer",
+      "integer",
+      "text",
+      "text"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsKML",
+    "signature": "text ST_AsKML(geometry  geom, integer  maxdecimaldigits=15, text  nprefix=NULL);",
+    "input_types": [
+      "geometry",
+      "integer",
+      "text"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsKML",
+    "signature": "text ST_AsKML(geography  geog, integer  maxdecimaldigits=15, text  nprefix=NULL);",
+    "input_types": [
+      "geography",
+      "integer",
+      "text"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsLatLonText",
+    "signature": "text ST_AsLatLonText(geometry  pt, text  format='');",
+    "input_types": [
+      "geometry",
+      "text"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsMVTGeom",
+    "signature": "geometry ST_AsMVTGeom(geometry  geom, box2d  bounds, integer  extent=4096, integer  buffer=256, boolean  clip_geom=true);",
+    "input_types": [
+      "geometry",
+      "box2d",
+      "integer",
+      "integer",
+      "boolean"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_AsMVT",
+    "signature": "bytea ST_AsMVT(anyelement set  row);",
+    "input_types": [
+      "anyelement"
+    ],
+    "output_type": "bytea"
+  },
+  {
+    "function_name": "ST_AsMVT",
+    "signature": "bytea ST_AsMVT(anyelement  row, text  name);",
+    "input_types": [
+      "anyelement",
+      "text"
+    ],
+    "output_type": "bytea"
+  },
+  {
+    "function_name": "ST_AsMVT",
+    "signature": "bytea ST_AsMVT(anyelement  row, text  name, integer  extent);",
+    "input_types": [
+      "anyelement",
+      "text",
+      "integer"
+    ],
+    "output_type": "bytea"
+  },
+  {
+    "function_name": "ST_AsMVT",
+    "signature": "bytea ST_AsMVT(anyelement  row, text  name, integer  extent, text  geom_name);",
+    "input_types": [
+      "anyelement",
+      "text",
+      "integer",
+      "text"
+    ],
+    "output_type": "bytea"
+  },
+  {
+    "function_name": "ST_AsMVT",
+    "signature": "bytea ST_AsMVT(anyelement  row, text  name, integer  extent, text  geom_name, text  feature_id_name);",
+    "input_types": [
+      "anyelement",
+      "text",
+      "integer",
+      "text",
+      "text"
+    ],
+    "output_type": "bytea"
+  },
+  {
+    "function_name": "ST_AsSVG",
+    "signature": "text ST_AsSVG(geometry  geom, integer  rel=0, integer  maxdecimaldigits=15);",
+    "input_types": [
+      "geometry",
+      "integer",
+      "integer"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsSVG",
+    "signature": "text ST_AsSVG(geography  geog, integer  rel=0, integer  maxdecimaldigits=15);",
+    "input_types": [
+      "geography",
+      "integer",
+      "integer"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_AsTWKB",
+    "signature": "bytea ST_AsTWKB(geometry  geom, integer  prec=0, integer  prec_z=0, integer  prec_m=0, boolean  with_sizes=false, boolean  with_boxes=false);",
+    "input_types": [
+      "geometry",
+      "integer",
+      "integer",
+      "integer",
+      "boolean",
+      "boolean"
+    ],
+    "output_type": "bytea"
+  },
+  {
+    "function_name": "ST_AsTWKB",
+    "signature": "bytea ST_AsTWKB(geometry[]  geom, bigint[]  ids, integer  prec=0, integer  prec_z=0, integer  prec_m=0, boolean  with_sizes=false, boolean  with_boxes=false);",
+    "input_types": [
+      "geometry[]",
+      "bigint[]",
+      "integer",
+      "integer",
+      "integer",
+      "boolean",
+      "boolean"
+    ],
+    "output_type": "bytea"
+  },
+  {
+    "function_name": "ST_AsX3D",
+    "signature": "text ST_AsX3D(geometry  g1, integer  maxdecimaldigits=15, integer  options=0);",
+    "input_types": [
+      "geometry",
+      "integer",
+      "integer"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_GeoHash",
+    "signature": "text ST_GeoHash(geometry  geom, integer  maxchars=full_precision_of_point);",
+    "input_types": [
+      "geometry",
+      "integer"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_3DIntersects",
+    "signature": "boolean ST_3DIntersects( geometry geomA ,  geometry geomB );",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_Contains",
+    "signature": "boolean ST_Contains(geometry  geomA, geometry  geomB);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_ContainsProperly",
+    "signature": "boolean ST_ContainsProperly(geometry  geomA, geometry  geomB);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_CoveredBy",
+    "signature": "boolean ST_CoveredBy(geometry  geomA, geometry  geomB);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_CoveredBy",
+    "signature": "boolean ST_CoveredBy(geography  geogA, geography  geogB);",
+    "input_types": [
+      "geography",
+      "geography"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_Covers",
+    "signature": "boolean ST_Covers(geometry  geomA, geometry  geomB);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_Covers",
+    "signature": "boolean ST_Covers(geography  geogpolyA, geography  geogpointB);",
+    "input_types": [
+      "geography",
+      "geography"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_Crosses",
+    "signature": "boolean ST_Crosses(geometry g1, geometry g2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_Disjoint",
+    "signature": "boolean ST_Disjoint( geometry A ,  geometry B );",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_Equals",
+    "signature": "boolean ST_Equals(geometry  A, geometry  B);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_Intersects",
+    "signature": "boolean ST_Intersects( geometry geomA ,  geometry geomB );",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_Intersects",
+    "signature": "boolean ST_Intersects( geography geogA ,  geography geogB );",
+    "input_types": [
+      "geography",
+      "geography"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_LineCrossingDirection",
+    "signature": "integer ST_LineCrossingDirection(geometry  linestringA, geometry  linestringB);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "ST_OrderingEquals",
+    "signature": "boolean ST_OrderingEquals(geometry  A, geometry  B);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_Overlaps",
+    "signature": "boolean ST_Overlaps(geometry  A, geometry  B);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_Relate",
+    "signature": "boolean ST_Relate(geometry  geomA, geometry  geomB, text  intersectionMatrixPattern);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "text"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_Relate",
+    "signature": "text ST_Relate(geometry  geomA, geometry  geomB);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_Relate",
+    "signature": "text ST_Relate(geometry  geomA, geometry  geomB, integer  boundaryNodeRule);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "integer"
+    ],
+    "output_type": "text"
+  },
+  {
+    "function_name": "ST_RelateMatch",
+    "signature": "boolean ST_RelateMatch(text  intersectionMatrix, text  intersectionMatrixPattern);",
+    "input_types": [
+      "text",
+      "text"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_Touches",
+    "signature": "boolean ST_Touches(geometry  A, geometry  B);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_Within",
+    "signature": "boolean ST_Within(geometry  A, geometry  B);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_3DDWithin",
+    "signature": "boolean ST_3DDWithin(geometry  g1, geometry  g2, double precision  distance_of_srid);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "double"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_3DDFullyWithin",
+    "signature": "boolean ST_3DDFullyWithin(geometry  g1, geometry  g2, double precision  distance);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "double"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_DFullyWithin",
+    "signature": "boolean ST_DFullyWithin(geometry  g1, geometry  g2, double precision  distance);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "double"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_DWithin",
+    "signature": "boolean ST_DWithin(geometry  g1, geometry  g2, double precision  distance_of_srid);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "double"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_DWithin",
+    "signature": "boolean ST_DWithin(geography  gg1, geography  gg2, double precision  distance_meters, boolean  use_spheroid = true);",
+    "input_types": [
+      "geography",
+      "geography",
+      "double",
+      "boolean"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_PointInsideCircle",
+    "signature": "boolean ST_PointInsideCircle(geometry  a_point, float  center_x, float  center_y, float  radius);",
+    "input_types": [
+      "geometry",
+      "float",
+      "float",
+      "float"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_Area",
+    "signature": "float ST_Area(geometry g1);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_Area",
+    "signature": "float ST_Area(geography geog, boolean use_spheroid = true);",
+    "input_types": [
+      "geography",
+      "boolean"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_Azimuth",
+    "signature": "float ST_Azimuth(geometry origin, geometry target);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_Azimuth",
+    "signature": "float ST_Azimuth(geography origin, geography target);",
+    "input_types": [
+      "geography",
+      "geography"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_Angle",
+    "signature": "float ST_Angle(geometry point1, geometry point2, geometry point3, geometry point4);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_Angle",
+    "signature": "float ST_Angle(geometry line1, geometry line2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_ClosestPoint",
+    "signature": "geometry ST_ClosestPoint(geometry  geom1, geometry  geom2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_ClosestPoint",
+    "signature": "geography ST_ClosestPoint(geography  geom1, geography  geom2, boolean  use_spheroid = true);",
+    "input_types": [
+      "geography",
+      "geography",
+      "boolean"
+    ],
+    "output_type": "geography"
+  },
+  {
+    "function_name": "ST_3DClosestPoint",
+    "signature": "geometry ST_3DClosestPoint(geometry  g1, geometry  g2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Distance",
+    "signature": "float ST_Distance(geometry  g1, geometry  g2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_Distance",
+    "signature": "float ST_Distance(geography  geog1, geography  geog2, boolean  use_spheroid = true);",
+    "input_types": [
+      "geography",
+      "geography",
+      "boolean"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_3DDistance",
+    "signature": "float ST_3DDistance(geometry  g1, geometry  g2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_DistanceSphere",
+    "signature": "float ST_DistanceSphere(geometry  geomlonlatA, geometry  geomlonlatB, float8  radius=6371008);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "float8"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_DistanceSpheroid",
+    "signature": "float ST_DistanceSpheroid(geometry  geomlonlatA, geometry  geomlonlatB, spheroid measurement_spheroid=WGS84);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "spheroid"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_FrechetDistance",
+    "signature": "float ST_FrechetDistance(geometry  g1, geometry  g2, float densifyFrac = -1);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "float"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_HausdorffDistance",
+    "signature": "float ST_HausdorffDistance(geometry  g1, geometry  g2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_HausdorffDistance",
+    "signature": "float ST_HausdorffDistance(geometry  g1, geometry  g2, float densifyFrac);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "float"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_Length",
+    "signature": "float ST_Length(geometry a_2dlinestring);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_Length",
+    "signature": "float ST_Length(geography geog, boolean use_spheroid = true);",
+    "input_types": [
+      "geography",
+      "boolean"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_Length2D",
+    "signature": "float ST_Length2D(geometry  a_2dlinestring);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_3DLength",
+    "signature": "float ST_3DLength(geometry  a_3dlinestring);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_LengthSpheroid",
+    "signature": "float ST_LengthSpheroid(geometry  a_geometry, spheroid  a_spheroid);",
+    "input_types": [
+      "geometry",
+      "spheroid"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_LongestLine",
+    "signature": "geometry ST_LongestLine(geometry  g1, geometry  g2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_3DLongestLine",
+    "signature": "geometry ST_3DLongestLine(geometry  g1, geometry  g2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_MaxDistance",
+    "signature": "float ST_MaxDistance(geometry  g1, geometry  g2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_3DMaxDistance",
+    "signature": "float ST_3DMaxDistance(geometry  g1, geometry  g2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_MinimumClearance",
+    "signature": "float ST_MinimumClearance(geometry g);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_MinimumClearanceLine",
+    "signature": "Geometry ST_MinimumClearanceLine(geometry  g);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "Geometry"
+  },
+  {
+    "function_name": "ST_Perimeter",
+    "signature": "float ST_Perimeter(geometry g1);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_Perimeter",
+    "signature": "float ST_Perimeter(geography geog, boolean use_spheroid = true);",
+    "input_types": [
+      "geography",
+      "boolean"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_Perimeter2D",
+    "signature": "float ST_Perimeter2D(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_3DPerimeter",
+    "signature": "float ST_3DPerimeter(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_ShortestLine",
+    "signature": "geometry ST_ShortestLine(geometry  geom1, geometry  geom2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_ShortestLine",
+    "signature": "geography ST_ShortestLine(geography  geom1, geography  geom2, boolean use_spheroid = true);",
+    "input_types": [
+      "geography",
+      "geography",
+      "boolean"
+    ],
+    "output_type": "geography"
+  },
+  {
+    "function_name": "ST_3DShortestLine",
+    "signature": "geometry ST_3DShortestLine(geometry  g1, geometry  g2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_ClipByBox2D",
+    "signature": "geometry ST_ClipByBox2D(geometry geom, box2d box);",
+    "input_types": [
+      "geometry",
+      "box2d"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Difference",
+    "signature": "geometry ST_Difference(geometry  geomA, geometry  geomB, float8  gridSize = -1);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "float8"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Intersection",
+    "signature": "geometry ST_Intersection( geometry geomA ,  geometry geomB ,  float8 gridSize = -1 );",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "float8"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Intersection",
+    "signature": "geography ST_Intersection( geography geogA ,  geography geogB );",
+    "input_types": [
+      "geography",
+      "geography"
+    ],
+    "output_type": "geography"
+  },
+  {
+    "function_name": "ST_MemUnion",
+    "signature": "geometry ST_MemUnion(geometry set geomfield);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Node",
+    "signature": "geometry ST_Node(geometry  geom);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Split",
+    "signature": "geometry ST_Split(geometry input, geometry blade);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_SymDifference",
+    "signature": "geometry ST_SymDifference(geometry  geomA, geometry  geomB, float8  gridSize = -1);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "float8"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_UnaryUnion",
+    "signature": "geometry ST_UnaryUnion(geometry  geom, float8  gridSize = -1);",
+    "input_types": [
+      "geometry",
+      "float8"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Union",
+    "signature": "geometry ST_Union(geometry g1, geometry g2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Union",
+    "signature": "geometry ST_Union(geometry g1, geometry g2, float8 gridSize);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "float8"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Union",
+    "signature": "geometry ST_Union(geometry[] g1_array);",
+    "input_types": [
+      "geometry[]"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Union",
+    "signature": "geometry ST_Union(geometry set g1field);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Union",
+    "signature": "geometry ST_Union(geometry set g1field, float8 gridSize);",
+    "input_types": [
+      "geometry",
+      "float8"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Buffer",
+    "signature": "geometry ST_Buffer(geometry  g1, float  radius_of_buffer, text  buffer_style_parameters = '');",
+    "input_types": [
+      "geometry",
+      "float",
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Buffer",
+    "signature": "geometry ST_Buffer(geometry  g1, float  radius_of_buffer, integer  num_seg_quarter_circle);",
+    "input_types": [
+      "geometry",
+      "float",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Buffer",
+    "signature": "geography ST_Buffer(geography  g1, float  radius_of_buffer, text  buffer_style_parameters);",
+    "input_types": [
+      "geography",
+      "float",
+      "text"
+    ],
+    "output_type": "geography"
+  },
+  {
+    "function_name": "ST_Buffer",
+    "signature": "geography ST_Buffer(geography  g1, float  radius_of_buffer, integer  num_seg_quarter_circle);",
+    "input_types": [
+      "geography",
+      "float",
+      "integer"
+    ],
+    "output_type": "geography"
+  },
+  {
+    "function_name": "ST_BuildArea",
+    "signature": "geometry ST_BuildArea(geometry  geom);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Centroid",
+    "signature": "geometry ST_Centroid(geometry  g1);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Centroid",
+    "signature": "geography ST_Centroid(geography  g1, boolean  use_spheroid = true);",
+    "input_types": [
+      "geography",
+      "boolean"
+    ],
+    "output_type": "geography"
+  },
+  {
+    "function_name": "ST_ChaikinSmoothing",
+    "signature": "geometry ST_ChaikinSmoothing(geometry geom, integer nIterations = 1, boolean preserveEndPoints = false);",
+    "input_types": [
+      "geometry",
+      "integer",
+      "boolean"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_ConcaveHull",
+    "signature": "geometry ST_ConcaveHull(geometry  param_geom, float  param_pctconvex, boolean  param_allow_holes = false);",
+    "input_types": [
+      "geometry",
+      "float",
+      "boolean"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_ConvexHull",
+    "signature": "geometry ST_ConvexHull(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_DelaunayTriangles",
+    "signature": "geometry ST_DelaunayTriangles(geometry  g1, float  tolerance = 0.0, int4  flags = 0);",
+    "input_types": [
+      "geometry",
+      "float",
+      "int4"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_FilterByM",
+    "signature": "geometry ST_FilterByM(geometry geom, double precision min, double precision max = null, boolean returnM = false);",
+    "input_types": [
+      "geometry",
+      "double",
+      "double",
+      "boolean"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_GeneratePoints",
+    "signature": "geometry ST_GeneratePoints(geometry g, integer npoints, integer seed = 0);",
+    "input_types": [
+      "geometry",
+      "integer",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_LineMerge",
+    "signature": "geometry ST_LineMerge(geometry  amultilinestring);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_LineMerge",
+    "signature": "geometry ST_LineMerge(geometry  amultilinestring, boolean  directed);",
+    "input_types": [
+      "geometry",
+      "boolean"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_MinimumBoundingCircle",
+    "signature": "geometry ST_MinimumBoundingCircle(geometry  geomA, integer  num_segs_per_qt_circ=48);",
+    "input_types": [
+      "geometry",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_OrientedEnvelope",
+    "signature": "geometry ST_OrientedEnvelope( geometry geom );",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_OffsetCurve",
+    "signature": "geometry ST_OffsetCurve(geometry  line, float  signed_distance, text  style_parameters='');",
+    "input_types": [
+      "geometry",
+      "float",
+      "text"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_PointOnSurface",
+    "signature": "geometry ST_PointOnSurface(geometry  g1);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Polygonize",
+    "signature": "geometry ST_Polygonize(geometry set geomfield);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Polygonize",
+    "signature": "geometry ST_Polygonize(geometry[] geom_array);",
+    "input_types": [
+      "geometry[]"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_ReducePrecision",
+    "signature": "geometry ST_ReducePrecision(geometry  g, float8  gridsize);",
+    "input_types": [
+      "geometry",
+      "float8"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_SharedPaths",
+    "signature": "geometry ST_SharedPaths(geometry lineal1, geometry lineal2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Simplify",
+    "signature": "geometry ST_Simplify(geometry geom, float tolerance);",
+    "input_types": [
+      "geometry",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Simplify",
+    "signature": "geometry ST_Simplify(geometry geom, float tolerance, boolean preserveCollapsed);",
+    "input_types": [
+      "geometry",
+      "float",
+      "boolean"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_SimplifyPreserveTopology",
+    "signature": "geometry ST_SimplifyPreserveTopology(geometry geom, float tolerance);",
+    "input_types": [
+      "geometry",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_SimplifyPolygonHull",
+    "signature": "geometry ST_SimplifyPolygonHull(geometry  param_geom, float  vertex_fraction, boolean  is_outer = true);",
+    "input_types": [
+      "geometry",
+      "float",
+      "boolean"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_SimplifyVW",
+    "signature": "geometry ST_SimplifyVW(geometry geom, float tolerance);",
+    "input_types": [
+      "geometry",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_SetEffectiveArea",
+    "signature": "geometry ST_SetEffectiveArea(geometry geom, float threshold = 0, integer set_area = 1);",
+    "input_types": [
+      "geometry",
+      "float",
+      "integer"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_TriangulatePolygon",
+    "signature": "geometry ST_TriangulatePolygon(geometry geom);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_VoronoiLines",
+    "signature": "geometry ST_VoronoiLines( geometry geom ,  float8 tolerance = 0.0 ,  geometry extend_to = NULL );",
+    "input_types": [
+      "geometry",
+      "float8",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_VoronoiPolygons",
+    "signature": "geometry ST_VoronoiPolygons( geometry geom ,  float8 tolerance = 0.0 ,  geometry extend_to = NULL );",
+    "input_types": [
+      "geometry",
+      "float8",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_CoverageInvalidEdges",
+    "signature": "geometry ST_CoverageInvalidEdges(geometry winset  geom, float8  tolerance = 0);",
+    "input_types": [
+      "geometry",
+      "float8"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_CoverageSimplify",
+    "signature": "geometry ST_CoverageSimplify(geometry winset  geom, float8  tolerance, boolean  simplifyBoundary = true);",
+    "input_types": [
+      "geometry",
+      "float8",
+      "boolean"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_CoverageUnion",
+    "signature": "geometry ST_CoverageUnion(geometry set geom);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Affine",
+    "signature": "geometry ST_Affine(geometry  geomA, float  a, float  b, float  c, float  d, float  e, float  f, float  g, float  h, float  i, float  xoff, float  yoff, float  zoff);",
+    "input_types": [
+      "geometry",
+      "float",
+      "float",
+      "float",
+      "float",
+      "float",
+      "float",
+      "float",
+      "float",
+      "float",
+      "float",
+      "float",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Affine",
+    "signature": "geometry ST_Affine(geometry  geomA, float  a, float  b, float  d, float  e, float  xoff, float  yoff);",
+    "input_types": [
+      "geometry",
+      "float",
+      "float",
+      "float",
+      "float",
+      "float",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Rotate",
+    "signature": "geometry ST_Rotate(geometry geomA, float rotRadians);",
+    "input_types": [
+      "geometry",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Rotate",
+    "signature": "geometry ST_Rotate(geometry geomA, float rotRadians, float x0, float y0);",
+    "input_types": [
+      "geometry",
+      "float",
+      "float",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Rotate",
+    "signature": "geometry ST_Rotate(geometry geomA, float rotRadians, geometry pointOrigin);",
+    "input_types": [
+      "geometry",
+      "float",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_RotateX",
+    "signature": "geometry ST_RotateX(geometry geomA, float rotRadians);",
+    "input_types": [
+      "geometry",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_RotateY",
+    "signature": "geometry ST_RotateY(geometry geomA, float rotRadians);",
+    "input_types": [
+      "geometry",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_RotateZ",
+    "signature": "geometry ST_RotateZ(geometry geomA, float rotRadians);",
+    "input_types": [
+      "geometry",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Scale",
+    "signature": "geometry ST_Scale(geometry  geomA, float XFactor, float YFactor, float ZFactor);",
+    "input_types": [
+      "geometry",
+      "float",
+      "float",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Scale",
+    "signature": "geometry ST_Scale(geometry  geomA, float XFactor, float YFactor);",
+    "input_types": [
+      "geometry",
+      "float",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Scale",
+    "signature": "geometry ST_Scale(geometry  geom, geometry factor);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Scale",
+    "signature": "geometry ST_Scale(geometry  geom, geometry factor, geometry origin);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Translate",
+    "signature": "geometry ST_Translate(geometry  g1, float  deltax, float  deltay);",
+    "input_types": [
+      "geometry",
+      "float",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Translate",
+    "signature": "geometry ST_Translate(geometry  g1, float  deltax, float  deltay, float  deltaz);",
+    "input_types": [
+      "geometry",
+      "float",
+      "float",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_TransScale",
+    "signature": "geometry ST_TransScale(geometry  geomA, float deltaX, float deltaY, float XFactor, float YFactor);",
+    "input_types": [
+      "geometry",
+      "float",
+      "float",
+      "float",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_ClusterDBSCAN",
+    "signature": "integer ST_ClusterDBSCAN(geometry winset  geom, float8  eps, integer  minpoints);",
+    "input_types": [
+      "geometry",
+      "float8",
+      "integer"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "ST_ClusterIntersectingWin",
+    "signature": "integer ST_ClusterIntersectingWin(geometry winset  geom);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "ST_ClusterKMeans",
+    "signature": "integer ST_ClusterKMeans(geometry winset  geom, integer  number_of_clusters, float  max_radius);",
+    "input_types": [
+      "geometry",
+      "integer",
+      "float"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "ST_ClusterWithinWin",
+    "signature": "integer ST_ClusterWithinWin(geometry winset  geom, float8  distance);",
+    "input_types": [
+      "geometry",
+      "float8"
+    ],
+    "output_type": "integer"
+  },
+  {
+    "function_name": "Box2D",
+    "signature": "box2d Box2D(geometry  geom);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "box2d"
+  },
+  {
+    "function_name": "Box3D",
+    "signature": "box3d Box3D(geometry  geom);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "box3d"
+  },
+  {
+    "function_name": "ST_EstimatedExtent",
+    "signature": "box2d ST_EstimatedExtent(text  schema_name, text  table_name, text  geocolumn_name, boolean  parent_only);",
+    "input_types": [
+      "text",
+      "text",
+      "text",
+      "boolean"
+    ],
+    "output_type": "box2d"
+  },
+  {
+    "function_name": "ST_EstimatedExtent",
+    "signature": "box2d ST_EstimatedExtent(text  schema_name, text  table_name, text  geocolumn_name);",
+    "input_types": [
+      "text",
+      "text",
+      "text"
+    ],
+    "output_type": "box2d"
+  },
+  {
+    "function_name": "ST_EstimatedExtent",
+    "signature": "box2d ST_EstimatedExtent(text  table_name, text  geocolumn_name);",
+    "input_types": [
+      "text",
+      "text"
+    ],
+    "output_type": "box2d"
+  },
+  {
+    "function_name": "ST_Expand",
+    "signature": "geometry ST_Expand(geometry  geom, float units_to_expand);",
+    "input_types": [
+      "geometry",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Expand",
+    "signature": "geometry ST_Expand(geometry  geom, float dx, float dy, float dz=0, float dm=0);",
+    "input_types": [
+      "geometry",
+      "float",
+      "float",
+      "float",
+      "float"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_Expand",
+    "signature": "box2d ST_Expand(box2d  box, float units_to_expand);",
+    "input_types": [
+      "box2d",
+      "float"
+    ],
+    "output_type": "box2d"
+  },
+  {
+    "function_name": "ST_Expand",
+    "signature": "box2d ST_Expand(box2d  box, float dx, float dy);",
+    "input_types": [
+      "box2d",
+      "float",
+      "float"
+    ],
+    "output_type": "box2d"
+  },
+  {
+    "function_name": "ST_Expand",
+    "signature": "box3d ST_Expand(box3d  box, float units_to_expand);",
+    "input_types": [
+      "box3d",
+      "float"
+    ],
+    "output_type": "box3d"
+  },
+  {
+    "function_name": "ST_Expand",
+    "signature": "box3d ST_Expand(box3d  box, float dx, float dy, float dz=0);",
+    "input_types": [
+      "box3d",
+      "float",
+      "float",
+      "float"
+    ],
+    "output_type": "box3d"
+  },
+  {
+    "function_name": "ST_Extent",
+    "signature": "box2d ST_Extent(geometry set geomfield);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "box2d"
+  },
+  {
+    "function_name": "ST_3DExtent",
+    "signature": "box3d ST_3DExtent(geometry set geomfield);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "box3d"
+  },
+  {
+    "function_name": "ST_MakeBox2D",
+    "signature": "box2d ST_MakeBox2D(geometry  pointLowLeft, geometry  pointUpRight);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "box2d"
+  },
+  {
+    "function_name": "ST_3DMakeBox",
+    "signature": "box3d ST_3DMakeBox(geometry  point3DLowLeftBottom, geometry  point3DUpRightTop);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "box3d"
+  },
+  {
+    "function_name": "ST_XMax",
+    "signature": "float ST_XMax(box3d  aGeomorBox2DorBox3D);",
+    "input_types": [
+      "box3d"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_XMin",
+    "signature": "float ST_XMin(box3d  aGeomorBox2DorBox3D);",
+    "input_types": [
+      "box3d"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_YMax",
+    "signature": "float ST_YMax(box3d  aGeomorBox2DorBox3D);",
+    "input_types": [
+      "box3d"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_YMin",
+    "signature": "float ST_YMin(box3d  aGeomorBox2DorBox3D);",
+    "input_types": [
+      "box3d"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_ZMax",
+    "signature": "float ST_ZMax(box3d  aGeomorBox2DorBox3D);",
+    "input_types": [
+      "box3d"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_ZMin",
+    "signature": "float ST_ZMin(box3d  aGeomorBox2DorBox3D);",
+    "input_types": [
+      "box3d"
+    ],
+    "output_type": "float"
+  },
+  {
+    "function_name": "ST_LineInterpolatePoint",
+    "signature": "geometry ST_LineInterpolatePoint(geometry  a_linestring, float8  a_fraction);",
+    "input_types": [
+      "geometry",
+      "float8"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_LineInterpolatePoint",
+    "signature": "geography ST_LineInterpolatePoint(geography  a_linestring, float8  a_fraction, boolean use_spheroid = true);",
+    "input_types": [
+      "geography",
+      "float8",
+      "boolean"
+    ],
+    "output_type": "geography"
+  },
+  {
+    "function_name": "ST_3DLineInterpolatePoint",
+    "signature": "geometry ST_3DLineInterpolatePoint(geometry  a_linestring, float8  a_fraction);",
+    "input_types": [
+      "geometry",
+      "float8"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_LineInterpolatePoints",
+    "signature": "geometry ST_LineInterpolatePoints(geometry  a_linestring, float8  a_fraction, boolean  repeat);",
+    "input_types": [
+      "geometry",
+      "float8",
+      "boolean"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_LineInterpolatePoints",
+    "signature": "geography ST_LineInterpolatePoints(geography  a_linestring, float8  a_fraction, boolean use_spheroid = true, boolean  repeat = true);",
+    "input_types": [
+      "geography",
+      "float8",
+      "boolean",
+      "boolean"
+    ],
+    "output_type": "geography"
+  },
+  {
+    "function_name": "ST_LineLocatePoint",
+    "signature": "float8 ST_LineLocatePoint(geometry  a_linestring, geometry  a_point);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "float8"
+  },
+  {
+    "function_name": "ST_LineLocatePoint",
+    "signature": "float8 ST_LineLocatePoint(geography  a_linestring, geography  a_point, boolean use_spheroid = true);",
+    "input_types": [
+      "geography",
+      "geography",
+      "boolean"
+    ],
+    "output_type": "float8"
+  },
+  {
+    "function_name": "ST_LineSubstring",
+    "signature": "geometry ST_LineSubstring(geometry  a_linestring, float8  startfraction, float8  endfraction);",
+    "input_types": [
+      "geometry",
+      "float8",
+      "float8"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_LineSubstring",
+    "signature": "geography ST_LineSubstring(geography  a_linestring, float8  startfraction, float8  endfraction);",
+    "input_types": [
+      "geography",
+      "float8",
+      "float8"
+    ],
+    "output_type": "geography"
+  },
+  {
+    "function_name": "ST_LocateAlong",
+    "signature": "geometry ST_LocateAlong(geometry  geom_with_measure, float8  measure, float8  offset = 0);",
+    "input_types": [
+      "geometry",
+      "float8",
+      "float8"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_LocateBetween",
+    "signature": "geometry ST_LocateBetween(geometry  geom, float8  measure_start, float8  measure_end, float8  offset = 0);",
+    "input_types": [
+      "geometry",
+      "float8",
+      "float8",
+      "float8"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_LocateBetweenElevations",
+    "signature": "geometry ST_LocateBetweenElevations(geometry  geom, float8  elevation_start, float8  elevation_end);",
+    "input_types": [
+      "geometry",
+      "float8",
+      "float8"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_InterpolatePoint",
+    "signature": "float8 ST_InterpolatePoint(geometry  linear_geom_with_measure, geometry  point);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "float8"
+  },
+  {
+    "function_name": "ST_AddMeasure",
+    "signature": "geometry ST_AddMeasure(geometry  geom_mline, float8  measure_start, float8  measure_end);",
+    "input_types": [
+      "geometry",
+      "float8",
+      "float8"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "ST_IsValidTrajectory",
+    "signature": "boolean ST_IsValidTrajectory(geometry  line);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "ST_ClosestPointOfApproach",
+    "signature": "float8 ST_ClosestPointOfApproach(geometry  track1, geometry  track2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "float8"
+  },
+  {
+    "function_name": "ST_DistanceCPA",
+    "signature": "float8 ST_DistanceCPA(geometry  track1, geometry  track2);",
+    "input_types": [
+      "geometry",
+      "geometry"
+    ],
+    "output_type": "float8"
+  },
+  {
+    "function_name": "ST_CPAWithin",
+    "signature": "boolean ST_CPAWithin(geometry  track1, geometry  track2, float8  dist);",
+    "input_types": [
+      "geometry",
+      "geometry",
+      "float8"
+    ],
+    "output_type": "boolean"
+  },
+  {
+    "function_name": "PostGIS_AddBBox",
+    "signature": "geometry PostGIS_AddBBox(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "PostGIS_DropBBox",
+    "signature": "geometry PostGIS_DropBBox(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "geometry"
+  },
+  {
+    "function_name": "PostGIS_HasBBox",
+    "signature": "boolean PostGIS_HasBBox(geometry  geomA);",
+    "input_types": [
+      "geometry"
+    ],
+    "output_type": "boolean"
+  }
+]
