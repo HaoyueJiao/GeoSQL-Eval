@@ -1,0 +1,11 @@
+{
+  "overall_correct_count": 1025,
+  "overall_incorrect_count": 335,
+  "overall_accuracy": 0.753676,
+  "GENERAL_KNOWLEDGE_correct_count": 500,
+  "GENERAL_KNOWLEDGE_incorrect_count": 180,
+  "GENERAL_KNOWLEDGE_accuracy": 0.735294,
+  "PARAMETER_CHECK_correct_count": 525,
+  "PARAMETER_CHECK_incorrect_count": 155,
+  "PARAMETER_CHECK_accuracy": 0.772059
+}
